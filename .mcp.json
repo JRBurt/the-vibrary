@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "vibrary": {
+      "command": "./.venv/bin/python",
+      "args": ["-m", "src.mcp_server"],
+      "cwd": "."
+    }
+  }
+}

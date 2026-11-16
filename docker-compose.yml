@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: vibrary-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: vibrary
+      POSTGRES_PASSWORD: vibrary
+      POSTGRES_DB: vibrary
+    ports:
+      - "5433:5432"
+    volumes:
+      - vibrary-pgdata:/var/lib/postgresql/data
+
+volumes:
+  vibrary-pgdata:
